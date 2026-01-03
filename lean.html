@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lean - Grupo Fusión">
+    <title>Lean y el cliclo PHVA- Grupo Fusión</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            background: linear-gradient(180deg, #e8f4f8 0%, #f0f9fc 50%, #e8f4f8 100%);
+            min-height: 100vh;
+        }
+    </style>
+</head>
+
+
+<body>
+    <nav class="custom-navbar">
+        <div class="nav-container">
+
+
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Inicio</a>
+
+                <!-- Consultoría Dropdown -->
+                <div class="nav-dropdown">
+                    <button class="nav-link dropdown-toggle">
+                        Consultoría
+
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="entregamos.html" class="dropdown-item">¿Qué entregamos a nuestros clientes?</a>
+                    </div>
+                </div>
+
+                <!-- Formación Dropdown -->
+                <div class="nav-dropdown">
+                    <button class="nav-link dropdown-toggle">
+                        Formación
+
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="lean.html" class="dropdown-item">Lean</a>
+                        <a href="gestion_tiempo.html" class="dropdown-item">Gestión del tiempo</a>
+                        <a href="comunicacion_asertiva.html" class="dropdown-item">Comunicación asertiva</a>
+                    </div>
+                </div>
+
+                <a href="index.html#nosotros" class="nav-link">Quiénes Somos</a>
+                <a href="index.html#contacto" class="nav-link">Contacto</a>
+            </div>
+
+            <button class="nav-toggle" id="navToggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-12 mx-auto text-center">
+                    <h1 class="text-white">Lean y el Ciclo PHVA</h1>
+                    <p class="lead text-white">La base de la Mejora Continua</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTRODUCCIÓN -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h2>La esencia de Lean</h2>
+                    <p>La esencia de Lean y de cualquier sistema de mejora continua se sostiene sobre una estructura
+                        poderosa: el <strong>Ciclo PHVA</strong> (Planear – Hacer – Verificar – Actuar), también
+                        conocido como PDCA. Este ciclo sirve como guía para resolver problemas, innovar procesos y
+                        sostener mejoras en el tiempo.</p>
+                    <p>Lean adopta el PHVA como su columna vertebral porque permite entender un problema, analizarlo,
+                        implementar mejoras y estandarizar soluciones para evitar que los problemas regresen. Tanto los
+                        proyectos Kaizen como iniciativas de innovación (Kakushin) se ordenan dentro de este ciclo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PDCA / PHVA -->
+    <section class="section-padding" style="background-color: rgba(255, 255, 255, 0.4); backdrop-filter: blur(10px);">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-12 text-center">
+                    <h2>PDCA / PHVA: El corazón de Lean</h2>
+                    <p class="lead">Un ciclo estructurado para resolver problemas y mejorar procesos</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="accordion" id="phvaAccordion">
+                        <!-- 1. PLANEAR -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                    1. PLANEAR (Plan)
+                                </button>
+                            </h2>
+                            <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1"
+                                data-bs-parent="#phvaAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>¿Qué problema debemos resolver o qué reto queremos alcanzar?</strong></p>
+
+                                    <h6 class="mt-3">Paso 1 – Definir y analizar el problema</h6>
+                                    <p><strong>Técnicas:</strong> Diagrama de Pareto, Hoja de verificación, Histograma,
+                                        Carta de control</p>
+
+                                    <h6 class="mt-3">Paso 2 – Buscar todas las posibles causas</h6>
+                                    <p><strong>Técnicas:</strong> Observación directa, Lluvia de ideas, Diagrama de
+                                        Ishikawa</p>
+
+                                    <h6 class="mt-3">Paso 3 – Identificar la causa raíz</h6>
+                                    <p><strong>Técnicas:</strong> Pareto, Estratificación, Diagrama de dispersión,
+                                        Ishikawa</p>
+
+                                    <h6 class="mt-3">Paso 4 – Proponer medidas remedio (5W + 1H)</h6>
+                                    <ul>
+                                        <li><strong>Por qué:</strong> necesidad</li>
+                                        <li><strong>Qué:</strong> objetivo</li>
+                                        <li><strong>Dónde:</strong> lugar de implementación</li>
+                                        <li><strong>Cuánto:</strong> tiempo, costo, recursos</li>
+                                        <li><strong>Cómo:</strong> plan de acción</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2. HACER -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                    2. HACER (Do)
+                                </button>
+                            </h2>
+                            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
+                                data-bs-parent="#phvaAccordion">
+                                <div class="accordion-body">
+                                    <h6>Paso 5 – Ejecutar las medidas remedio</h6>
+                                    <p>Se aplican las soluciones diseñadas, involucrando a los afectados y utilizando
+                                        equipos multidisciplinarios.</p>
+                                    <p>Aquí Lean impulsa conceptos como <strong>Kaizen, Trabajo Estándar y Flujo
+                                            Continuo</strong> para realizar una implementación controlada.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3. VERIFICAR -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                    3. VERIFICAR (Check)
+                                </button>
+                            </h2>
+                            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
+                                data-bs-parent="#phvaAccordion">
+                                <div class="accordion-body">
+                                    <h6>Paso 6 – Evaluar los resultados</h6>
+                                    <p>Se revisa si las soluciones realmente resolvieron el problema.</p>
+                                    <p><strong>Técnicas:</strong> Histograma, Pareto, Carta de control, Hoja de
+                                        verificación</p>
+                                    <p class="mt-3"><em>Esta fase es clave porque sin datos no hay mejora.</em></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 4. ACTUAR -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                    4. ACTUAR (Act)
+                                </button>
+                            </h2>
+                            <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
+                                data-bs-parent="#phvaAccordion">
+                                <div class="accordion-body">
+                                    <h6>Paso 7 – Prevenir la recurrencia</h6>
+                                    <p>Implica estandarizar, supervisar y ajustar. Se documentan procedimientos, se
+                                        actualizan instructivos y se entrena al personal.</p>
+
+                                    <h6 class="mt-3">Paso 8 – Conclusión y siguiente ciclo</h6>
+                                    <p>Se evalúa el proceso seguido y se inicia un nuevo ciclo de mejora.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KAIZEN Y KAKUSHIN -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-12 text-center">
+                    <h2>PDCA aplicado a Kaizen y Kakushin</h2>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-6 col-12">
+                    <div class="custom-block bg-white h-100">
+                        <h4><i class="bi bi-arrow-repeat"></i> PDCA / KAIZEN</h4>
+                        <p class="mb-3"><strong>Usado cuando existe un problema o desviación.</strong></p>
+                        <ol>
+                            <li>Problema</li>
+                            <li>Análisis de causa</li>
+                            <li>Solución</li>
+                            <li>Implementación y estandarización</li>
+                        </ol>
+                        <p class="mt-3"><strong>Objetivo:</strong> Mejoras incrementales y constantes.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-12">
+                    <div class="custom-block bg-white h-100">
+                        <h4><i class="bi bi-lightbulb"></i> PDCA / KAKUSHIN</h4>
+                        <p class="mb-3"><strong>Usado cuando se busca un reto o estado ideal.</strong></p>
+                        <ol>
+                            <li>Definir el reto</li>
+                            <li>Diseñar soluciones innovadoras</li>
+                            <li>Analizar supuestos</li>
+                            <li>Implementación y estandarizar</li>
+                        </ol>
+                        <p class="mt-3"><strong>Objetivo:</strong> Mejoras radicales o transformacionales.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LEAN METODOLOGÍA -->
+    <section class="section-padding" style="background-color: rgba(255, 255, 255, 0.4); backdrop-filter: blur(10px);">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-12">
+                    <h2>Lean: una metodología basada en el ciclo PHVA</h2>
+                    <p>Lean surge en Toyota en los años 30 con el propósito de eliminar desperdicios, mejorar el flujo y
+                        aumentar la productividad. Aunque Lean utiliza muchas herramientas, su verdadera fortaleza no
+                        está en las técnicas, sino en <strong>la forma de pensar</strong>.</p>
+                    <p>Esa forma de pensar es el ciclo PHVA, que guía a las personas a:</p>
+                    <ul>
+                        <li>Entender y definir los problemas</li>
+                        <li>Probar soluciones</li>
+                        <li>Confirmar resultados</li>
+                        <li>Estandarizar para sostener las mejoras</li>
+                    </ul>
+                    <p class="mt-3">Lean funciona porque integra <strong>disciplina, análisis, experimentación y
+                            aprendizaje continuo</strong>. No se trata de aplicar herramientas aisladas, sino de
+                        asegurar que todo cambio o iniciativa siga un proceso estructurado.</p>
+                    <p><em>Por eso, PHVA es la base cultural y operativa de cualquier sistema Lean.</em></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CULTURA DE MEJORA -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-12 text-center">
+                    <h2>¿Cuál es tu cultura de mejora?</h2>
+                    <p class="lead">Conectar Lean con el PHVA depende de la cultura organizacional</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-6 col-12">
+                    <div class="custom-block bg-light h-100">
+                        <h4><i class="bi bi-calendar-event"></i> Mentalidad de proyectos</h4>
+                        <ul class="mt-3">
+                            <li>Campañas temporales</li>
+                            <li>Solo participan equipos formales</li>
+                            <li>Iniciativas aisladas</li>
+                            <li>Se reconoce solo el impacto</li>
+                            <li>Bajo compromiso directivo</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-12">
+                    <div class="custom-block bg-white h-100 border border-primary">
+                        <h4><i class="bi bi-gear-fill text-primary"></i> Sistema de mejora</h4>
+                        <ul class="mt-3">
+                            <li>Iniciativas todo el año</li>
+                            <li>Participación de todos</li>
+                            <li>El aprendizaje es parte del sistema</li>
+                            <li>Se reconoce la iniciativa</li>
+                            <li>Alta dirección involucrada</li>
+                            <li><strong>El PHVA se usa como forma de pensar</strong></li>
+                        </ul>
+                        <p class="mt-3 text-primary"><strong>Este es el ideal para empresas Lean.</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KANBAN -->
+    <section class="section-padding" style="background-color: rgba(255, 255, 255, 0.4); backdrop-filter: blur(10px);">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-12">
+                    <h2>Sistema Kanban dentro del ciclo PHVA</h2>
+                    <p>Kanban funciona como un mecanismo visual para controlar la producción mediante un sistema Pull,
+                        alineado a la demanda y al Takt Time.</p>
+                    <ul class="mt-3">
+                        <li><strong>Planear:</strong> identificación de necesidades del cliente y capacidades.</li>
+                        <li><strong>Hacer:</strong> tarjetas, contenedores, reglas de reabastecimiento.</li>
+                        <li><strong>Verificar:</strong> monitoreo del flujo.</li>
+                        <li><strong>Actuar:</strong> ajustar niveles, rutas y capacidad.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REDISEÑO DE PROCESOS -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-12">
+                    <h2>Pasos para rediseñar un proceso para mejorar su flujo de valor</h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="accordion" id="procesosAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingP1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseP1" aria-expanded="true" aria-controls="collapseP1">
+                                    1. Elegir el proceso a mejorar o flujo de valor
+                                </button>
+                            </h2>
+                            <div id="collapseP1" class="accordion-collapse collapse show" aria-labelledby="headingP1"
+                                data-bs-parent="#procesosAccordion">
+                                <div class="accordion-body">
+                                    El primer paso consiste en seleccionar claramente cuál proceso será analizado y
+                                    optimizado.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingP2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseP2" aria-expanded="false" aria-controls="collapseP2">
+                                    2. Identificar al cliente del valor que aporta el proceso
+                                </button>
+                            </h2>
+                            <div id="collapseP2" class="accordion-collapse collapse" aria-labelledby="headingP2"
+                                data-bs-parent="#procesosAccordion">
+                                <div class="accordion-body">
+                                    Se define quién recibe el valor del proceso: puede ser un cliente interno o externo.
+                                    Esto permite enfocar las mejoras según sus necesidades.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingP3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseP3" aria-expanded="false" aria-controls="collapseP3">
+                                    3. Hacer un diagrama de flujo de nivel general
+                                </button>
+                            </h2>
+                            <div id="collapseP3" class="accordion-collapse collapse" aria-labelledby="headingP3"
+                                data-bs-parent="#procesosAccordion">
+                                <div class="accordion-body">
+                                    Se realiza una representación básica del proceso actual para entender sus etapas
+                                    principales.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingP4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseP4" aria-expanded="false" aria-controls="collapseP4">
+                                    4. Hacer un mapa detallado del flujo de valor y establecer indicadores
+                                </button>
+                            </h2>
+                            <div id="collapseP4" class="accordion-collapse collapse" aria-labelledby="headingP4"
+                                data-bs-parent="#procesosAccordion">
+                                <div class="accordion-body">
+                                    Se construye el mapa del estado actual, identificando tiempos, desperdicios (mudas)
+                                    e indicadores clave de flujo.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingP5">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseP5" aria-expanded="false" aria-controls="collapseP5">
+                                    5. Investigar alternativas y proponer un nuevo mapa del flujo de valor
+                                </button>
+                            </h2>
+                            <div id="collapseP5" class="accordion-collapse collapse" aria-labelledby="headingP5"
+                                data-bs-parent="#procesosAccordion">
+                                <div class="accordion-body">
+                                    Se analizan oportunidades de mejora y se crea el diseño del estado futuro del
+                                    proceso.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingP6">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseP6" aria-expanded="false" aria-controls="collapseP6">
+                                    6. Diseñar e implementar los nuevos procesos
+                                </button>
+                            </h2>
+                            <div id="collapseP6" class="accordion-collapse collapse" aria-labelledby="headingP6"
+                                data-bs-parent="#procesosAccordion">
+                                <div class="accordion-body">
+                                    Se ejecutan las mejoras propuestas: cambios operativos, ajustes de métodos,
+                                    redistribución de tareas, etc.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingP7">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseP7" aria-expanded="false" aria-controls="collapseP7">
+                                    7. Evaluar las mejoras logradas mediante indicadores
+                                </button>
+                            </h2>
+                            <div id="collapseP7" class="accordion-collapse collapse" aria-labelledby="headingP7"
+                                data-bs-parent="#procesosAccordion">
+                                <div class="accordion-body">
+                                    Se revisan los resultados obtenidos comparando el antes y el después para validar el
+                                    impacto de flujo, desperdicio y dinero.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingP8">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseP8" aria-expanded="false" aria-controls="collapseP8">
+                                    8. Estandarizar los nuevos procesos
+                                </button>
+                            </h2>
+                            <div id="collapseP8" class="accordion-collapse collapse" aria-labelledby="headingP8"
+                                data-bs-parent="#procesosAccordion">
+                                <div class="accordion-body">
+                                    Una vez comprobados los beneficios, se documentan y formalizan los nuevos
+                                    procedimientos para asegurar su sostenibilidad.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRINCIPIOS WOMACK & JONES -->
+    <section class="section-padding" style="background-color: rgba(255, 255, 255, 0.4); backdrop-filter: blur(10px);">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-12">
+                    <h2>Los 5 Principios de Lean según Womack y Jones (2003)</h2>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="custom-block bg-white h-100">
+                        <h5><i class="bi bi-1-circle-fill text-primary"></i> Especificar el valor</h5>
+                        <p class="mt-3">Para cada producto desde el punto de vista del cliente final (qué se agrega).
+                        </p>
+                        <p class="text-muted"><em>Voice of customer</em></p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="custom-block bg-white h-100">
+                        <h5><i class="bi bi-2-circle-fill text-primary"></i> Identificar el flujo del valor</h5>
+                        <p class="mt-3">Y eliminar el desperdicio. El mapa del flujo del valor es el conjunto de todas
+                            las acciones específicas que se ejecutan a lo largo del proceso.</p>
+                        <p class="mt-2"><strong>Tipos de actividades:</strong></p>
+                        <ol class="small">
+                            <li>Las que crean o agregan valor</li>
+                            <li>Las que no crean valor, pero son inevitables (muda tipo 1)</li>
+                            <li>Las que no crean valor y deben eliminarse (muda tipo 2)</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="custom-block bg-white h-100">
+                        <h5><i class="bi bi-3-circle-fill text-primary"></i> Agregar valor en flujo continuo</h5>
+                        <p class="mt-3">A través de las diferentes etapas del proceso.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="custom-block bg-white h-100">
+                        <h5><i class="bi bi-4-circle-fill text-primary"></i> Producir solo cuando el cliente lo solicita
+                        </h5>
+                        <p class="mt-3">Organizar el proceso para que produzca solo cuando el cliente lo solicita
+                            (Kanban).</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="custom-block bg-white h-100">
+                        <h5><i class="bi bi-5-circle-fill text-primary"></i> Buscar la perfección</h5>
+                        <p class="mt-3">Mejora continua constante.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h3 class="mb-4">¿Quieres implementar Lean en tu organización?</h3>
+                    <p class="lead mb-4">Contáctanos para conocer nuestros programas de consultoría y formación</p>
+                    <a href="mailto:contacto@grupofusion.com" class="btn btn-primary btn-lg">Solicitar más
+                        información</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+</body>
