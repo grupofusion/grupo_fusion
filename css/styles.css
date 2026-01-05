@@ -27,12 +27,34 @@ body {
     font-family: var(--body-font-family);
     color: var(--p-color);
     line-height: 1.6;
+    overflow-x: hidden; /* Prevenir scroll horizontal */
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--title-font-family);
     font-weight: 700;
     color: var(--primary-color);
+    word-wrap: break-word; /* Romper palabras largas si es necesario */
+}
+
+/* Hacer todas las imágenes responsive por defecto */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Prevenir que el contenido se desborde */
+.container,
+.container-fluid {
+    overflow-x: hidden;
+}
+
+/* Hacer videos responsive */
+video,
+iframe {
+    max-width: 100%;
+    height: auto;
 }
 
 /* ==========================================
@@ -511,8 +533,127 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================
+   MEJORAS DE ACCESIBILIDAD Y TÁCTIL
+   ========================================== */
+
+/* Área táctil mínima de 44x44px para móviles */
+@media (max-width: 768px) {
+    button,
+    a.btn,
+    .nav-link,
+    .dropdown-item {
+        min-height: 44px;
+        min-width: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* Mejorar contraste para accesibilidad */
+:focus {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
+}
+
+/* Smooth scroll para toda la página */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Evitar que el texto sea demasiado pequeño en móviles */
+@media (max-width: 576px) {
+    body {
+        font-size: 16px; /* Evita zoom automático en iOS */
+    }
+}
+
+/* Mejorar rendimiento de animaciones */
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a, button {
+    -webkit-tap-highlight-color: rgba(128, 208, 199, 0.3);
+}
+
+/* Asegurar que los elementos flexbox no se desborden */
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.row > * {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (max-width: 576px) {
+    .row {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    
+    .row > * {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+/* ==========================================
    RESPONSIVE
    ========================================== */
+
+/* Tablets (portrait) y dispositivos medianos */
+@media (max-width: 992px) {
+    .nav-container {
+        padding: 0 1.5rem;
+    }
+
+    .hero-section {
+        padding: 80px 0;
+        min-height: 400px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section h6 {
+        font-size: 1.1rem;
+    }
+
+    .section-padding {
+        padding: 60px 0;
+    }
+
+    .custom-block {
+        padding: 1.5rem;
+    }
+
+    .featured-section {
+        padding: 60px 0;
+    }
+
+    .timeline-section, .contact-section {
+        padding: 80px 0;
+    }
+
+    .vertical-scrollable-timeline li {
+        padding-left: 120px;
+    }
+
+    .icon-holder {
+        width: 80px;
+        height: 80px;
+    }
+
+    .icon-holder i {
+        font-size: 28px;
+    }
+}
+
+/* Tablets (landscape) y dispositivos pequeños */
 @media (max-width: 768px) {
     .nav-toggle {
         display: flex;
@@ -530,6 +671,7 @@ h1, h2, h3, h4, h5, h6 {
         padding: 2rem;
         transition: left 0.3s ease;
         overflow-y: auto;
+        gap: 0;
     }
 
     .nav-menu.active {
@@ -544,6 +686,7 @@ h1, h2, h3, h4, h5, h6 {
     .nav-link {
         width: 100%;
         padding: 1rem;
+        justify-content: space-between;
     }
 
     .dropdown-content {
@@ -556,15 +699,22 @@ h1, h2, h3, h4, h5, h6 {
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease;
+        margin-top: 0;
     }
 
     .nav-dropdown.active .dropdown-content {
-        max-height: 300px;
+        max-height: 500px;
     }
 
     .dropdown-item {
         color: #ffffff;
         padding-left: 2rem;
+        border-left-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .dropdown-item:hover {
+        background: rgba(255, 255, 255, 0.15);
+        color: #ffffff;
     }
 
     .btn-membresia {
@@ -585,16 +735,33 @@ h1, h2, h3, h4, h5, h6 {
         transform: rotate(-45deg) translate(7px, -7px);
     }
 
+    .hero-section {
+        padding: 60px 0;
+        min-height: 350px;
+    }
+
     .hero-section h1 {
         font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+
+    .hero-section h6 {
+        font-size: 1rem;
+    }
+
+    .hero-section .lead {
+        font-size: 1.1rem;
     }
 
     .contact-section {
         background-attachment: scroll;
+        padding: 60px 0;
     }
 
     .vertical-scrollable-timeline li {
         padding-left: 100px;
+        padding-bottom: 50px;
     }
 
     .icon-holder {
@@ -604,5 +771,290 @@ h1, h2, h3, h4, h5, h6 {
 
     .icon-holder i {
         font-size: 24px;
+    }
+
+    .list-progress {
+        left: 32px;
+    }
+
+    .timeline-content {
+        padding: 20px 25px;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .site-footer {
+        padding: 40px 0 20px;
+    }
+
+    /* Ajustes para tablas y contenido */
+    .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Ajustes para imágenes */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Móviles grandes */
+@media (max-width: 576px) {
+    .nav-container {
+        padding: 0 1rem;
+    }
+
+    .hero-section {
+        padding: 40px 0;
+        min-height: 300px;
+    }
+
+    .hero-section h1 {
+        font-size: 1.75rem;
+        line-height: 1.3;
+    }
+
+    .hero-section h6 {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-section .lead {
+        font-size: 1rem;
+    }
+
+    .section-padding {
+        padding: 40px 0;
+    }
+
+    .featured-section {
+        padding: 40px 0;
+        border-radius: 0 0 40px 40px;
+    }
+
+    .custom-block {
+        padding: 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    h4 {
+        font-size: 1.25rem;
+    }
+
+    h5 {
+        font-size: 1.1rem;
+    }
+
+    .lead {
+        font-size: 1.1rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    .btn-primary {
+        padding: 0.75rem 2rem !important;
+        font-size: 1rem !important;
+    }
+
+    .contact-section .btn-primary {
+        padding: 0.75rem 2rem;
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .vertical-scrollable-timeline li {
+        padding-left: 85px;
+        padding-bottom: 40px;
+    }
+
+    .icon-holder {
+        width: 60px;
+        height: 60px;
+    }
+
+    .icon-holder i {
+        font-size: 20px;
+    }
+
+    .list-progress {
+        left: 27px;
+        width: 6px;
+    }
+
+    .timeline-content {
+        padding: 15px 20px;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.9rem;
+    }
+
+    /* Formulario de contacto */
+    .contact-section .custom-block {
+        padding: 1.5rem;
+    }
+
+    .contact-section h4 {
+        font-size: 1.5rem;
+    }
+
+    .contact-section .form-control {
+        padding: 0.65rem 0.85rem;
+        font-size: 0.95rem;
+    }
+
+    /* Footer */
+    .site-footer {
+        text-align: center;
+    }
+
+    .site-footer .col-lg-3,
+    .site-footer .col-md-4,
+    .site-footer .col-6 {
+        margin-bottom: 2rem;
+    }
+
+    .site-footer-links {
+        margin-bottom: 1rem;
+    }
+
+    .navbar-brand img {
+        width: 100px;
+    }
+
+    /* Acordeón */
+    .accordion-button {
+        font-size: 0.95rem;
+        padding: 1rem;
+    }
+
+    .accordion-body {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    /* Ajustes de espaciado */
+    .mb-4 {
+        margin-bottom: 1.25rem !important;
+    }
+
+    .mb-5 {
+        margin-bottom: 2rem !important;
+    }
+
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 375px) {
+    .hero-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-section h6 {
+        font-size: 0.9rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    .nav-container {
+        padding: 0 0.75rem;
+    }
+
+    .custom-block {
+        padding: 1rem;
+    }
+
+    .section-padding {
+        padding: 30px 0;
+    }
+
+    .vertical-scrollable-timeline li {
+        padding-left: 75px;
+    }
+
+    .icon-holder {
+        width: 50px;
+        height: 50px;
+    }
+
+    .icon-holder i {
+        font-size: 18px;
+    }
+
+    .list-progress {
+        left: 22px;
+        width: 5px;
+    }
+
+    .contact-section .btn-primary {
+        font-size: 0.95rem;
+    }
+}
+
+/* Modo landscape para móviles */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero-section {
+        min-height: auto;
+        padding: 30px 0;
+    }
+
+    .section-padding {
+        padding: 40px 0;
+    }
+
+    .nav-menu {
+        height: auto;
+        max-height: calc(100vh - 80px);
+    }
+}
+
+/* Optimizaciones para impresión */
+@media print {
+    .custom-navbar,
+    .nav-toggle,
+    .btn-membresia,
+    footer {
+        display: none !important;
+    }
+
+    .hero-section,
+    .contact-section,
+    .timeline-section {
+        background: white !important;
+        color: black !important;
+    }
+
+    * {
+        background: white !important;
+        color: black !important;
     }
 }
